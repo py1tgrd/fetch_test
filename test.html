@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    var opts = {
+    headers: {
+        'mode':'cors'
+    }
+    }
+
+
+
+    fetch('https://www.marketwatch.com/investing/bond/tmbmkgb-20y?countryCode=BX', opts)
+        .then(response => response.text())
+        .then(value => {
+        document.getElementById('highcharts-8').innerHTML = value
+    });
+        console.log("Hello console")
+    </script>
+</body>
+</html>
